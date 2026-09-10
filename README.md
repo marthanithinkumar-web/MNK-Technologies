@@ -10,6 +10,6 @@ Official website: https://mnktechnologies.onrender.com/
 - **FileWeave** — Testing
 - **Nova** — In development
 
-This repository is the source of truth for the MNK Technologies company website.
+This repository is the source of truth for the MNK Technologies company website. Automated CI verifies the public hostname, sitemap, responsive layout, legal wording, and Google Search Console verification tag.
 
 MNK Technologies is not represented as a private limited or incorporated company.
