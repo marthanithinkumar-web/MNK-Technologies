@@ -19,6 +19,7 @@ for(const value of required){if(!html.includes(value))throw new Error(`Missing r
 if(html.includes('MNK Technologies Pvt. Ltd.')||html.includes('MNK Technologies Limited'))throw new Error('Incorrect incorporated-company wording found');
 if(!robots.includes('https://mnktechnologies.onrender.com/sitemap.xml'))throw new Error('robots.txt does not point to the official sitemap');
 if(!sitemap.includes('<loc>https://mnktechnologies.onrender.com/</loc>'))throw new Error('sitemap does not use the official hostname');
-if(html.includes('mnk-technologies.onrender.com')||robots.includes('mnk-technologies.onrender.com')||sitemap.includes('mnk-technologies.onrender.com'))throw new Error('Retired hostname remains in public website files');
+const retiredHostname=['mnk','technologies.onrender.com'].join('-');
+if(html.includes(retiredHostname)||robots.includes(retiredHostname)||sitemap.includes(retiredHostname))throw new Error('Retired hostname remains in public website files');
 if(!css.includes('@media(max-width:680px)'))throw new Error('Mobile layout rule missing');
 console.log('MNK Technologies website verification passed');
