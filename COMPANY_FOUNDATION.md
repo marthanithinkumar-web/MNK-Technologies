@@ -28,10 +28,10 @@ Build practical digital tools and intelligent technology that make useful tasks 
 - **Brand relationship:** “FileWeave — A product of MNK Technologies”
 - The live release covers the verified browser-first image and PDF workflows described in the FileWeave repository. Office, spreadsheet, presentation, audio and video processing remain future expansion areas until separately released.
 
-### Nova
+### Max
 - **Status:** In development
-- **Brand relationship while in development:** “Nova — by MNK Technologies”
-- Do not present Nova as generally available until its release status is explicitly changed.
+- **Brand relationship while in development:** “Max — by MNK Technologies”
+- Do not present Max as generally available until its release status is explicitly changed.
 
 ## Portfolio governance
 
