@@ -5,10 +5,13 @@ This document is the operating source of truth for the identity, portfolio and p
 ## Company identity
 
 - **Name:** MNK Technologies
-- **Legal form:** Udyam-registered proprietorship
+- **Legal form:** Udyam-registered MSME sole proprietorship
+- **Official designation for registrations:** Proprietor
 - **Country:** India
 - **Official website:** https://mnktechnologies.onrender.com/
+- **Udyam/MSME registration:** Complete
 - Do **not** describe the business as “MNK Technologies Pvt. Ltd.”, “MNK Technologies Limited”, an incorporated company, or any other legal form that has not actually been established.
+- Do not imply that other government/business portal registrations are complete merely because Udyam registration is complete. NSWS, GeM, CPPP/eProcure and similar portal setups must be represented according to their own actual status when referenced.
 
 ## Mission
 
