@@ -1,6 +1,8 @@
 # MNK Technologies
 
-Official website and company source of truth for **MNK Technologies**, an Udyam-registered proprietorship building practical digital tools and intelligent technology products.
+Official website and company source of truth for **MNK Technologies**, an Udyam-registered MSME sole proprietorship building practical digital tools and intelligent technology products in India.
+
+Official designation for registrations: **Proprietor**.
 
 Official website: https://mnktechnologies.onrender.com/
 
