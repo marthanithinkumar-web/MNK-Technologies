@@ -23,10 +23,10 @@ Build practical digital tools and intelligent technology that make useful tasks 
 - Independent public-service assistance product. It must not imply that MNK Technologies or POSP is a government department or government website.
 
 ### FileWeave
-- **Status:** Testing / pre-launch
+- **Status:** Live
 - **Official URL:** https://file-weave.vercel.app
-- Keep FileWeave as its own product identity while testing.
-- When FileWeave is moved from testing to a finished public product, use: “FileWeave — A product of MNK Technologies”.
+- **Brand relationship:** “FileWeave — A product of MNK Technologies”
+- The live release covers the verified browser-first image and PDF workflows described in the FileWeave repository. Office, spreadsheet, presentation, audio and video processing remain future expansion areas until separately released.
 
 ### Nova
 - **Status:** In development
