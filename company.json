@@ -1,0 +1,28 @@
+{
+  "company": {
+    "name": "MNK Technologies",
+    "legal_form": "Udyam-registered proprietorship",
+    "country": "India",
+    "official_url": "https://mnktechnologies.onrender.com/"
+  },
+  "products": [
+    {
+      "name": "Public Online Service Provider",
+      "short_name": "POSP",
+      "status": "live",
+      "url": "https://pospindia.onrender.com",
+      "brand_line": "Public Online Service Provider — A product of MNK Technologies"
+    },
+    {
+      "name": "FileWeave",
+      "status": "testing",
+      "url": "https://file-weave.vercel.app",
+      "brand_line_after_testing": "FileWeave — A product of MNK Technologies"
+    },
+    {
+      "name": "Nova",
+      "status": "in_development",
+      "brand_line": "Nova — by MNK Technologies"
+    }
+  ]
+}
