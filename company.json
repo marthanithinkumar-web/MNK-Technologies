@@ -1,7 +1,8 @@
 {
   "company": {
     "name": "MNK Technologies",
-    "legal_form": "Udyam-registered proprietorship",
+    "legal_form": "Udyam-registered MSME sole proprietorship",
+    "official_designation": "Proprietor",
     "country": "India",
     "official_url": "https://mnktechnologies.onrender.com/"
   },
