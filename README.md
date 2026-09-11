@@ -8,7 +8,7 @@ Official website: https://mnktechnologies.onrender.com/
 
 - **Public Online Service Provider (POSP)** — Live
 - **FileWeave** — Live
-- **Nova** — In development
+- **Max** — In development
 
 The official company identity and portfolio are defined in [`company.json`](./company.json). Company positioning, branding, product-status rules and release standards are defined in [`COMPANY_FOUNDATION.md`](./COMPANY_FOUNDATION.md).
 
