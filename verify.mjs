@@ -18,7 +18,7 @@ const required=[
   'https://pospindia.onrender.com',
   'FileWeave',
   'https://file-weave.vercel.app',
-  'Nova',
+  'Max',
   company.legal_form,
   company.official_url,
   'h2xCzca3X9ymEzki4UvgyHf5LBSszj1hsDbXAJmTD3Q'
