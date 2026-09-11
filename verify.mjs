@@ -25,10 +25,26 @@ const required=[
 ];
 for(const value of required){if(!html.includes(value))throw new Error(`Missing required content: ${value}`)}
 
+const statusLabels={
+  live:'Live',
+  testing:'Testing',
+  in_development:'In development',
+  paused:'Paused',
+  retired:'Retired',
+};
 for(const product of products){
   if(!product.name||!product.status)throw new Error('Every official product needs a name and status');
   if(!html.includes(product.name))throw new Error(`Public website is missing official product: ${product.name}`);
   if(product.url&&!html.includes(product.url))throw new Error(`Public website is missing official product URL: ${product.url}`);
+  const expectedStatus=statusLabels[product.status];
+  if(!expectedStatus)throw new Error(`Unknown product status in company.json: ${product.status}`);
+  const heading=`<h3>${product.name}</h3>`;
+  const headingIndex=html.indexOf(heading);
+  if(headingIndex<0)throw new Error(`Public website is missing product card heading: ${product.name}`);
+  const cardStart=html.lastIndexOf('<article class="product-card',headingIndex);
+  const cardEnd=html.indexOf('</article>',headingIndex);
+  const card=html.slice(cardStart,cardEnd);
+  if(!card.includes(`>${expectedStatus}</span>`))throw new Error(`Public website status for ${product.name} does not match company.json (${expectedStatus})`);
 }
 
 const productCardCount=(html.match(/class="product-card(?:\s|\")/g)||[]).length;
