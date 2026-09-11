@@ -15,9 +15,9 @@
     },
     {
       "name": "FileWeave",
-      "status": "testing",
+      "status": "live",
       "url": "https://file-weave.vercel.app",
-      "brand_line_after_testing": "FileWeave — A product of MNK Technologies"
+      "brand_line": "FileWeave — A product of MNK Technologies"
     },
     {
       "name": "Nova",
