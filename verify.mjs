@@ -8,7 +8,8 @@ const portfolio=JSON.parse(await readFile(new URL('./company.json',import.meta.u
 
 const {company,products}=portfolio;
 if(company?.name!=='MNK Technologies')throw new Error('Unexpected company name in company.json');
-if(company?.legal_form!=='Udyam-registered proprietorship')throw new Error('Unexpected company legal form in company.json');
+if(company?.legal_form!=='Udyam-registered MSME sole proprietorship')throw new Error('Unexpected company legal form in company.json');
+if(company?.official_designation!=='Proprietor')throw new Error('Unexpected official company designation in company.json');
 if(company?.official_url!=='https://mnktechnologies.onrender.com/')throw new Error('Unexpected official company URL in company.json');
 if(!Array.isArray(products)||products.length!==3)throw new Error('Official MNK Technologies portfolio must contain exactly three current products');
 
@@ -20,6 +21,7 @@ const required=[
   'https://file-weave.vercel.app',
   'Max',
   company.legal_form,
+  company.official_designation,
   company.official_url,
   'h2xCzca3X9ymEzki4UvgyHf5LBSszj1hsDbXAJmTD3Q'
 ];
