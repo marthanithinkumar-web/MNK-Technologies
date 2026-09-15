@@ -4,7 +4,7 @@ Official website and company source of truth for **MNK Technologies**, an Udyam-
 
 Official designation for registrations: **Proprietor**.
 
-Official website: https://mnktechnologies.onrender.com/
+Official website: https://mnk-tech.onrender.com/
 
 ## Official products
 
