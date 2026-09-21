@@ -4,6 +4,7 @@ const html=await readFile(new URL('./index.html',import.meta.url),'utf8');
 const css=await readFile(new URL('./styles.css',import.meta.url),'utf8');
 const robots=await readFile(new URL('./robots.txt',import.meta.url),'utf8');
 const sitemap=await readFile(new URL('./sitemap.xml',import.meta.url),'utf8');
+const logo=await readFile(new URL('./mnk-logo.png',import.meta.url));
 const portfolio=JSON.parse(await readFile(new URL('./company.json',import.meta.url),'utf8'));
 
 const {company,products}=portfolio;
@@ -58,4 +59,7 @@ if(!sitemap.includes('<loc>https://mnk-tech.onrender.com/</loc>'))throw new Erro
 const retiredHostname='mnktechnologies.onrender.com';
 if(html.includes(retiredHostname)||robots.includes(retiredHostname)||sitemap.includes(retiredHostname))throw new Error('Retired hostname remains in public website files');
 if(!css.includes('@media(max-width:680px)'))throw new Error('Mobile layout rule missing');
+if(logo.length<1000)throw new Error('MNK Technologies logo asset is missing or unexpectedly small');
+if(!html.includes('src="/mnk-logo.png"'))throw new Error('Header does not use the MNK Technologies logo asset');
+if(!html.includes('https://mnk-tech.onrender.com/mnk-logo.png'))throw new Error('Social/structured metadata does not reference the MNK Technologies logo');
 console.log('MNK Technologies company and website verification passed');
