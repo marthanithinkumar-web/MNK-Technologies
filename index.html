@@ -8,6 +8,7 @@
   <meta name="robots" content="index,follow" />
   <meta name="google-site-verification" content="h2xCzca3X9ymEzki4UvgyHf5LBSszj1hsDbXAJmTD3Q" />
   <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="MNK Technologies" />
   <meta property="og:title" content="MNK Technologies — Practical Digital Tools & AI Products" />
   <meta property="og:description" content="MNK Technologies builds practical digital tools and intelligent products, including Public Online Service Provider, FileWeave and Max." />
   <meta property="og:url" content="https://mnk-tech.onrender.com/" />
@@ -19,7 +20,29 @@
   <meta name="twitter:image" content="https://mnk-tech.onrender.com/mnk-logo.png" />
   <link rel="canonical" href="https://mnk-tech.onrender.com/" />
   <link rel="icon" href="/mnk-logo.png" type="image/png" />
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"MNK Technologies","url":"https://mnk-tech.onrender.com/","logo":"https://mnk-tech.onrender.com/mnk-logo.png","description":"Udyam-registered MSME sole proprietorship building practical digital tools and intelligent products in India."}</script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://mnk-tech.onrender.com/#organization",
+        "name": "MNK Technologies",
+        "url": "https://mnk-tech.onrender.com/",
+        "logo": "https://mnk-tech.onrender.com/mnk-logo.png",
+        "description": "Udyam-registered MSME sole proprietorship building practical digital tools and intelligent products in India."
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://mnk-tech.onrender.com/#website",
+        "name": "MNK Technologies",
+        "url": "https://mnk-tech.onrender.com/",
+        "publisher": { "@id": "https://mnk-tech.onrender.com/#organization" },
+        "inLanguage": "en-IN"
+      }
+    ]
+  }
+  </script>
   <title>MNK Technologies — Practical Digital Tools & AI Products</title>
   <link rel="stylesheet" href="/styles.css" />
 </head>
@@ -171,3 +194,4 @@
   <script src="/script.js" defer></script>
 </body>
 </html>
+
