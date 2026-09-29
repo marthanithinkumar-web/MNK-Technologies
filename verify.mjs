@@ -19,7 +19,7 @@ const required=[
   'Public Online Service Provider',
   'https://pospindia.onrender.com',
   'FileWeave',
-  'https://fileweave-mnk.vercel.app',
+  'https://fileweaveonline.vercel.app',
   'Max',
   company.legal_form,
   company.official_designation,
