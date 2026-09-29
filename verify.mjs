@@ -58,6 +58,9 @@ if(!robots.includes('https://mnktechindia.onrender.com/sitemap.xml'))throw new E
 if(!sitemap.includes('<loc>https://mnktechindia.onrender.com/</loc>'))throw new Error('sitemap does not use the official hostname');
 const retiredHostname='mnktechnologies.onrender.com';
 if(html.includes(retiredHostname)||robots.includes(retiredHostname)||sitemap.includes(retiredHostname))throw new Error('Retired hostname remains in public website files');
+const retiredFileWeaveHostnames=['file-weave.vercel.app','fileweave-mnk.vercel.app','fileweave.vercel.app'];
+const portfolioText=JSON.stringify(portfolio);
+for(const host of retiredFileWeaveHostnames){if(html.includes(host)||portfolioText.includes(host))throw new Error(`Retired FileWeave hostname remains in MNK portfolio: ${host}`)}
 if(!css.includes('@media(max-width:680px)'))throw new Error('Mobile layout rule missing');
 if(logo.length<1000)throw new Error('MNK Technologies logo asset is missing or unexpectedly small');
 if(!html.includes('src="/mnk-logo.png"'))throw new Error('Header does not use the MNK Technologies logo asset');
