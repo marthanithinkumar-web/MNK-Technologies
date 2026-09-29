@@ -4,7 +4,7 @@
     "legal_form": "Udyam-registered MSME sole proprietorship",
     "official_designation": "Proprietor",
     "country": "India",
-    "official_url": "https://mnk-tech.onrender.com/"
+    "official_url": "https://mnktechindia.onrender.com/"
   },
   "products": [
     {
@@ -17,7 +17,7 @@
     {
       "name": "FileWeave",
       "status": "live",
-      "url": "https://file-weave.vercel.app",
+      "url": "https://fileweave-mnk.vercel.app",
       "brand_line": "FileWeave — A product of MNK Technologies"
     },
     {

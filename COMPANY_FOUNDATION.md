@@ -8,7 +8,7 @@ This document is the operating source of truth for the identity, portfolio and p
 - **Legal form:** Udyam-registered MSME sole proprietorship
 - **Official designation for registrations:** Proprietor
 - **Country:** India
-- **Official website:** https://mnk-tech.onrender.com/
+- **Official website:** https://mnktechindia.onrender.com/
 - **Udyam/MSME registration:** Complete
 - Do **not** describe the business as “MNK Technologies Pvt. Ltd.”, “MNK Technologies Limited”, an incorporated company, or any other legal form that has not actually been established.
 - Do not imply that other government/business portal registrations are complete merely because Udyam registration is complete. NSWS, GeM, CPPP/eProcure and similar portal setups must be represented according to their own actual status when referenced.
@@ -27,7 +27,7 @@ Build practical digital tools and intelligent technology that make useful tasks 
 
 ### FileWeave
 - **Status:** Live
-- **Official URL:** https://file-weave.vercel.app
+- **Official URL:** https://fileweave-mnk.vercel.app
 - **Brand relationship:** “FileWeave — A product of MNK Technologies”
 - The live release covers the verified browser-first image and PDF workflows described in the FileWeave repository. Office, spreadsheet, presentation, audio and video processing remain future expansion areas until separately released.
 

@@ -1,7 +1,7 @@
 import http from 'node:http';
 
 const port=Number(process.env.PORT||3000);
-const target='https://mnk-tech.onrender.com';
+const target='https://mnktechindia.onrender.com';
 
 const server=http.createServer((req,res)=>{
   const path=req.url||'/';
