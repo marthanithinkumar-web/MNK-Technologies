@@ -27,7 +27,7 @@ Build practical digital tools and intelligent technology that make useful tasks 
 
 ### FileWeave
 - **Status:** Live
-- **Official URL:** https://fileweave-mnk.vercel.app
+- **Official URL:** https://fileweaveonline.vercel.app
 - **Brand relationship:** “FileWeave — A product of MNK Technologies”
 - The live release covers the verified browser-first image and PDF workflows described in the FileWeave repository. Office, spreadsheet, presentation, audio and video processing remain future expansion areas until separately released.
 
