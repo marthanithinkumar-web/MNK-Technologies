@@ -56,8 +56,10 @@ if(productCardCount!==products.length)throw new Error(`Public website product-ca
 if(html.includes('MNK Technologies Pvt. Ltd.')||html.includes('MNK Technologies Limited'))throw new Error('Incorrect incorporated-company wording found');
 if(!robots.includes('https://mnktechindia.onrender.com/sitemap.xml'))throw new Error('robots.txt does not point to the official sitemap');
 if(!sitemap.includes('<loc>https://mnktechindia.onrender.com/</loc>'))throw new Error('sitemap does not use the official hostname');
-const retiredHostname='mnktechnologies.onrender.com';
-if(html.includes(retiredHostname)||robots.includes(retiredHostname)||sitemap.includes(retiredHostname))throw new Error('Retired hostname remains in public website files');
+const retiredHostnames=['mnktechnologies.onrender.com','mnktech.onrender.com','mnk-tech.onrender.com'];
+for(const retiredHostname of retiredHostnames){
+  if(html.includes(retiredHostname)||robots.includes(retiredHostname)||sitemap.includes(retiredHostname))throw new Error(`Retired hostname remains in public website files: ${retiredHostname}`)
+}
 const retiredFileWeaveHostnames=['file-weave.vercel.app','fileweave-mnk.vercel.app','fileweave.vercel.app'];
 const portfolioText=JSON.stringify(portfolio);
 for(const host of retiredFileWeaveHostnames){if(html.includes(host)||portfolioText.includes(host))throw new Error(`Retired FileWeave hostname remains in MNK portfolio: ${host}`)}
