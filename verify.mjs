@@ -7,11 +7,13 @@ const sitemap=await readFile(new URL('./sitemap.xml',import.meta.url),'utf8');
 const logo=await readFile(new URL('./mnk-logo.png',import.meta.url));
 const portfolio=JSON.parse(await readFile(new URL('./company.json',import.meta.url),'utf8'));
 
+const OFFICIAL_URL='https://mnktech.onrender.com/';
+const OFFICIAL_HOST='mnktech.onrender.com';
 const {company,products}=portfolio;
 if(company?.name!=='MNK Technologies')throw new Error('Unexpected company name in company.json');
 if(company?.legal_form!=='Udyam-registered MSME sole proprietorship')throw new Error('Unexpected company legal form in company.json');
 if(company?.official_designation!=='Proprietor')throw new Error('Unexpected official company designation in company.json');
-if(company?.official_url!=='https://mnktechindia.onrender.com/')throw new Error('Unexpected official company URL in company.json');
+if(company?.official_url!==OFFICIAL_URL)throw new Error(`Unexpected official company URL in company.json: ${company?.official_url}`);
 if(!Array.isArray(products)||products.length!==3)throw new Error('Official MNK Technologies portfolio must contain exactly three current products');
 
 const required=[
@@ -54,11 +56,11 @@ const productCardCount=(html.match(/class="product-card(?:\s|\")/g)||[]).length;
 if(productCardCount!==products.length)throw new Error(`Public website product-card count (${productCardCount}) does not match official portfolio (${products.length})`);
 
 if(html.includes('MNK Technologies Pvt. Ltd.')||html.includes('MNK Technologies Limited'))throw new Error('Incorrect incorporated-company wording found');
-if(!robots.includes('https://mnktechindia.onrender.com/sitemap.xml'))throw new Error('robots.txt does not point to the official sitemap');
-if(!sitemap.includes('<loc>https://mnktechindia.onrender.com/</loc>'))throw new Error('sitemap does not use the official hostname');
-const retiredHostnames=['mnktechnologies.onrender.com','mnktech.onrender.com','mnk-tech.onrender.com'];
+if(!robots.includes(`${OFFICIAL_URL}sitemap.xml`))throw new Error('robots.txt does not point to the official sitemap');
+if(!sitemap.includes(`<loc>${OFFICIAL_URL}</loc>`))throw new Error('sitemap does not use the official hostname');
+const retiredHostnames=['mnktechnologies.onrender.com','mnk-tech.onrender.com','mnktechindia.onrender.com'];
 for(const retiredHostname of retiredHostnames){
-  if(html.includes(retiredHostname)||robots.includes(retiredHostname)||sitemap.includes(retiredHostname))throw new Error(`Retired hostname remains in public website files: ${retiredHostname}`)
+  if(html.includes(retiredHostname)||robots.includes(retiredHostname)||sitemap.includes(retiredHostname)||JSON.stringify(portfolio).includes(retiredHostname))throw new Error(`Retired hostname remains in public website files: ${retiredHostname}`)
 }
 const retiredFileWeaveHostnames=['file-weave.vercel.app','fileweave-mnk.vercel.app','fileweave.vercel.app'];
 const portfolioText=JSON.stringify(portfolio);
@@ -66,5 +68,5 @@ for(const host of retiredFileWeaveHostnames){if(html.includes(host)||portfolioTe
 if(!css.includes('@media(max-width:680px)'))throw new Error('Mobile layout rule missing');
 if(logo.length<1000)throw new Error('MNK Technologies logo asset is missing or unexpectedly small');
 if(!html.includes('src="/mnk-logo.png"'))throw new Error('Header does not use the MNK Technologies logo asset');
-if(!html.includes('https://mnktechindia.onrender.com/mnk-logo.png'))throw new Error('Social/structured metadata does not reference the MNK Technologies logo');
+if(!html.includes(`${OFFICIAL_URL}mnk-logo.png`))throw new Error('Social/structured metadata does not reference the MNK Technologies logo');
 console.log('MNK Technologies company and website verification passed');
