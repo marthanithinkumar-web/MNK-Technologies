@@ -16,6 +16,11 @@ if(company?.official_designation!=='Proprietor')throw new Error('Unexpected offi
 if(company?.official_url!==OFFICIAL_URL)throw new Error(`Unexpected official company URL in company.json: ${company?.official_url}`);
 if(!Array.isArray(products)||products.length!==3)throw new Error('Official MNK Technologies portfolio must contain exactly three current products');
 
+const descriptions=[...html.matchAll(/<meta (?:name|property)="(?:description|og:description|twitter:description)" content="([^"]*)"/g)].map(match=>match[1]);
+if(descriptions.length!==3)throw new Error(`Expected three synchronized search/social descriptions, found ${descriptions.length}`);
+if(descriptions.some(description=>description.length<25||description.length>160))throw new Error(`Meta descriptions must be 25–160 characters: ${descriptions.map(description=>description.length).join(', ')}`);
+if(new Set(descriptions).size!==1)throw new Error('Search, Open Graph, and Twitter descriptions must match');
+
 const required=[company.name,'Public Online Service Provider','https://pospindia.onrender.com','FileWeave','https://fileweaveonline.vercel.app','Max',company.legal_form,company.official_designation,company.official_url,'h2xCzca3X9ymEzki4UvgyHf5LBSszj1hsDbXAJmTD3Q'];
 for(const value of required){if(!html.includes(value))throw new Error(`Missing required content: ${value}`)}
 
